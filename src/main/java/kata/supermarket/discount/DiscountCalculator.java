@@ -16,7 +16,7 @@ public class DiscountCalculator {
     public DiscountCalculator(List<Item> items) {
         this.activeDiscounts = new HashSet<>(
                 Collections.singletonList(
-                        new BuyOneGetOneFreeSingleItemDiscount(items, null)
+                        new BuyOneGetOneFreeSingleProductDiscount(items, null)
                 )
         );
     }

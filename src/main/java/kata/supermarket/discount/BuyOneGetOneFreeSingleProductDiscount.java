@@ -1,18 +1,19 @@
 package kata.supermarket.discount;
 
 import kata.supermarket.Item;
+import kata.supermarket.Product;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class BuyOneGetOneFreeSingleItemDiscount extends SingleItemDiscount {
+public class BuyOneGetOneFreeSingleProductDiscount extends SingleProductDiscount {
 
     private final List<Item> items;
 
-    public BuyOneGetOneFreeSingleItemDiscount(List<Item> items, Item discountedItem) {
-        super(discountedItem);
+    public BuyOneGetOneFreeSingleProductDiscount(List<Item> items, Product discountedProduct) {
+        super(discountedProduct);
         this.items = items;
     }
 
