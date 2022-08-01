@@ -1,6 +1,7 @@
 package kata.supermarket.discount;
 
 import kata.supermarket.Item;
+import kata.supermarket.Product;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -16,7 +17,7 @@ public class DiscountCalculator {
     public DiscountCalculator(List<Item> items) {
         this.activeDiscounts = new HashSet<>(
                 Collections.singletonList(
-                        new BuyOneGetOneFreeSingleProductDiscount(items, null)
+                        new BuyOneGetOneFreeSingleProductDiscount(items, new Product(new BigDecimal("0.49")))
                 )
         );
     }

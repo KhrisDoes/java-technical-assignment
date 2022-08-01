@@ -4,7 +4,7 @@ import kata.supermarket.Product;
 
 public abstract class SingleProductDiscount implements Discount {
 
-    private Product discountedProduct;
+    protected Product discountedProduct;
 
     public SingleProductDiscount(Product discountedProduct) {
         this.discountedProduct = discountedProduct;

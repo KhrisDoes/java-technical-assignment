@@ -30,7 +30,9 @@ class BasketTest {
                 multipleItemsPricedPerUnit(),
                 aSingleItemPricedByWeight(),
                 multipleItemsPricedByWeight(),
-                aSingleItemPricedPerUnitWithBuyOneGetOneFreeDiscount()
+                twoItemsPricedPerUnitWithBuyOneGetOneFreeDiscount(),
+                threeItemsPricedPerUnitWithBuyOneGetOneFreeDiscount(),
+                fourItemsPricedPerUnitWithBuyOneGetOneFreeDiscount()
         );
     }
 
@@ -53,9 +55,18 @@ class BasketTest {
         return Arguments.of("a single item priced per unit", "0.49", Collections.singleton(aPintOfMilk()));
     }
 
-    private static Arguments aSingleItemPricedPerUnitWithBuyOneGetOneFreeDiscount() {
+    private static Arguments twoItemsPricedPerUnitWithBuyOneGetOneFreeDiscount() {
         return Arguments.of("two identical items priced per unit with buy one get one free discount", "0.49", Arrays.asList(aPintOfMilk(), aPintOfMilk()));
     }
+
+    private static Arguments fourItemsPricedPerUnitWithBuyOneGetOneFreeDiscount() {
+        return Arguments.of("four identical items priced per unit with buy one get one free discount", "0.98", Arrays.asList(aPintOfMilk(), aPintOfMilk(), aPintOfMilk(), aPintOfMilk()));
+    }
+
+    private static Arguments threeItemsPricedPerUnitWithBuyOneGetOneFreeDiscount() {
+        return Arguments.of("three identical items priced per unit with buy one get one free discount", "0.98", Arrays.asList(aPintOfMilk(), aPintOfMilk(), aPintOfMilk()));
+    }
+
 
     private static Arguments noItems() {
         return Arguments.of("no items", "0.00", Collections.emptyList());
